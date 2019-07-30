@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello world</title>
+</head>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+  var socket = io();
+  socket.emit('get_biker_order_connect', { biker_id: '9'});  
+  socket.on('get_biker_order_data', function (data) {
+    console.log(data);
+  });
+  
+</script>
+<body>
+
+</body>
+
+</html>
